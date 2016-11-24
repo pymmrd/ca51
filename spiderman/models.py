@@ -19,6 +19,30 @@ class Shop(models.Model):
     SHOPPING = 12
     FASHION = 13
     JOB = 14
+    #
+    LMEISHI = 15
+    DICHAN = 16
+    LAWER = 17
+    TOUR = 18
+    CDOCTOR = 19
+    INS = 20
+    HFIANCE = 21
+    YUEZI = 22
+    CAR2 = 23
+    KUAIDI = 24
+    BANJIA = 25
+    TOUR2 = 26
+    JIAZHU = 27
+    HTOUR3 = 28
+    CAR_Z = 29
+    CAR_W = 30
+    LIUXUE = 31
+    CAMERA = 32
+    CLEAN = 33
+    BANK = 34
+    HAIR = 35
+
+
 
     CATEGORY_CHOICES = (
         (MEISHI, u'餐饮美食'),
@@ -35,11 +59,33 @@ class Shop(models.Model):
         (SHOPPING, u'商场购物'),
         (FASHION, u'时尚美容'),
         (JOB, u'工作招聘'),
+        (LMEISHI, u'洛杉矶美食'),
+        (DICHAN, u'地产经纪'),
+        (LAWER, u'华人律师'),
+        (TOUR, u'华人旅行社'),
+        (CDOCTOR, u'华人医生'),
+        (INS, u'保险经纪'),
+        (HFIANCE, u'华人会计师'),
+        (YUEZI, u'月子中心'),
+        (CAR2, u'驾驶教练/学校'),
+        (KUAIDI, u'快递公司'),
+        (BANJIA, u'搬家公司'),
+        (TOUR2, u'洛杉矶旅游'),
+        (JIAZHU, u'建筑装修/建筑师 '),
+        (HTOUR3, u'华人旅游接送'),
+        (CAR_Z, u'汽车租赁'),
+        (CAR_W, u'汽车维修'),
+        (LIUXUE, u'留学服务'),
+        (CAMERA, u'照相馆'),
+        (CLEAN, u'清洁公司'),
+        (BANK, u'贷款银行/代理'),
+        (HAIR, u'美容美发'),
     )
 
     CA51 = 1
     VAN = 2
     YORKBBS = 3
+
     SOURCE_CHOICES = (
         (CA51, 'kb.51.ca'),
         (VAN, 'dianpu.vanpeople.com'),
@@ -63,6 +109,16 @@ class Shop(models.Model):
     )
 
     address = models.CharField(
+        verbose_name=u'地址',
+        max_length=200,
+    )
+
+    address2 = models.CharField(
+        verbose_name=u'地址',
+        max_length=200,
+    )
+
+    address3 = models.CharField(
         verbose_name=u'地址',
         max_length=200,
     )
@@ -92,6 +148,3 @@ class Shop(models.Model):
         db_table = 'shop'
         verbose_name = u'商家'
         verbose_name_plural = u'商家'
-
-
-
