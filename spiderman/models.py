@@ -8,10 +8,33 @@ class Shop(models.Model):
     MEISHI = 1
     XIUXIAN = 2
     CAR = 3
+    AIRPORT = 4
+    HOUSE = 5
+    LIVE = 6
+    BUSINESS = 7
+    LAW = 8
+    DOCTOR = 9
+    TRAIN = 10
+    OLD = 11
+    SHOPPING = 12
+    FASHION = 13
+    JOB = 14
 
     CATEGORY_CHOICES = (
         (MEISHI, u'餐饮美食'),
         (XIUXIAN, u'休闲娱乐'),
+        (CAR,  u'汽车服务'),
+        (AIRPORT,  u'接送机票'),
+        (HOUSE,  u'房产家居'),
+        (LIVE,  u'生活服务'),
+        (BUSINESS,  u'生意服务'),
+        (LAW,  u'财会法律'),
+        (DOCTOR,  u'医疗保健'),
+        (TRAIN,  u'教育培训'),
+        (OLD,  u'商城二手'),
+        (SHOPPING, u'商场购物'),
+        (FASHION, u'时尚美容'),
+        (JOB, u'工作招聘'),
     )
 
     CA51 = 1
