@@ -69,6 +69,8 @@ class VanPeople(CreeperBase):
                         tel=tel,
                         district=dist,
                         opentime=open_time,
+                        category=2,
+                        source=2,
                     )
                     shop.save()
             except Exception:
@@ -85,7 +87,7 @@ class Command(BaseCommand):
     def handle(self, **options):
         start = int(options.get('start'))
         end = int(options.get('end'))
-        url = "http://dianpu.vanpeople.com/item-list-catid-1-aid-0-order-score-type-normal-num-20-total-3389-page-%s.html"
+        url = "http://dianpu.vanpeople.com/item-list-catid-16-aid-0-order-score-type-normal-num-20-total-495-page-%s.html"
         people = VanPeople()
         for page in range(start, end+1):
             page_url = url % page

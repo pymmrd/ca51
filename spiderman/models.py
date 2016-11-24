@@ -14,8 +14,10 @@ class Shop(models.Model):
     )
 
     CA51 = 1
+    VAN = 2
     SOURCE_CHOICES = (
         (CA51, 'kb.51.ca'),
+        (VAN, 'dianpu.vanpeople.com'),
     )
 
     category = models.IntegerField(
@@ -41,7 +43,7 @@ class Shop(models.Model):
 
     opentime = models.CharField(
         verbose_name=u'营业时间',
-        max_length=30,
+        max_length=200,
     )
     
     district = models.CharField(
