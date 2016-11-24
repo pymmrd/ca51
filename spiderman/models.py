@@ -15,9 +15,11 @@ class Shop(models.Model):
 
     CA51 = 1
     VAN = 2
+    YORKBBS = 3
     SOURCE_CHOICES = (
         (CA51, 'kb.51.ca'),
         (VAN, 'dianpu.vanpeople.com'),
+        (YORKBBS, 'info.yorkbbs.ca'),
     )
 
     category = models.IntegerField(
