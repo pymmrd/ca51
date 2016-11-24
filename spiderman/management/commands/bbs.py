@@ -14,10 +14,10 @@ from base import CreeperBase
 
 
 class VanPeople(CreeperBase):
-    items_xpath = "//ul[@class='item-cont']"
+    items_xpath = "//ol[@class='mainList-item']"
     title_xpath = "child::li/h2/a"
-    tel_xpath = "child::li[@class='item-cont-pin']/p/font"
-    addr_xpath = "child::li[@class='item-cont-address']"
+    tel_xpath = "child::li/div/ul[@class='item-cont']/li[@class='item-cont-phone']/font"
+    addr_xpath = "child::li/div/ul[@class='item-cont']/li[@class='item-cont-address']"
     dist_xpath = ""
     time_xpath = ""
 

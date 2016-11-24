@@ -21,7 +21,7 @@ def output_shop(modeladmin, request, queryset):
     sheet.write(0, 4, label=u'商圈')
     sheet.write(0, 5, label=u'分类')
     sheet.write(0, 6, label=u'来源')
-    queryset = Shop.objects.all()
+    queryset = Shop.objects.filter(source=3)
     row = 1
     for item in queryset:
         sheet.write(row, 0, item.name)

@@ -7,6 +7,7 @@ from django.db import models
 class Shop(models.Model):
     MEISHI = 1
     XIUXIAN = 2
+    CAR = 3
 
     CATEGORY_CHOICES = (
         (MEISHI, u'餐饮美食'),
